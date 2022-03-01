@@ -21,6 +21,7 @@ class FirstScreen extends StatelessWidget {
           RaisedButton(
             onPressed: () {
               Navigator.of(context).pushNamed(SecondScreen.routeName);
+              // Navigator.of(context).pushNamed(SecondScreen.routeName, arguments: 'recipe_id');
             },
             child: Text('GO TO SECOND SCREEN'),
           ),

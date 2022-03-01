@@ -4,6 +4,7 @@ import './firstScreen.dart';
 
 class SecondScreen extends StatelessWidget {
   static const routeName = '/second-screen';
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
