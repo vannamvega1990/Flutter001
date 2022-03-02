@@ -35,6 +35,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   url_launcher: ^6.0.20 # goi sang app khac: sms, call, email.
+  flutter_svg: ^1.0.3
+  lottie: ^1.2.2
+  font_awesome_flutter: ^9.2.0
 
 dev_dependencies:
   flutter_test:
