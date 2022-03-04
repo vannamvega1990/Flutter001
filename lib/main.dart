@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 
 // import 'study001/listView/listView002.dart';
 // import 'study001/loginRegister/loginSimple002/controler.dart';
-import 'study001/animation/animation002.dart';
+import 'study001/gridView/gridView002.dart';
 
 // void main() {
 //   runApp(const Manhinh1());
