@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -46,6 +47,7 @@ class _MyFadeTest extends State<MyFadeTest> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
+    debugPrint('123');
     controller = AnimationController(
       duration: const Duration(milliseconds: 2000),
       vsync: this,
@@ -70,6 +72,7 @@ class _MyFadeTest extends State<MyFadeTest> with TickerProviderStateMixin {
         tooltip: 'Fade',
         child: Icon(Icons.brush),
         onPressed: () {
+          debugPrint('123');
           controller.forward();
         },
       ),

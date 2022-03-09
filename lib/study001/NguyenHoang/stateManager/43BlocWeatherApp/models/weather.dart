@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+
 enum WeatherCondition {
   snow,
   sleet,
@@ -12,6 +13,7 @@ enum WeatherCondition {
   clear,
   unknown
 }
+
 class Weather extends Equatable {
   final WeatherCondition weatherCondition;
   final String formattedCondition;
@@ -24,29 +26,29 @@ class Weather extends Equatable {
   final String location;
   //constructor
   const Weather({
-    this.weatherCondition,
-    this.formattedCondition,
-    this.minTemp,
-    this.temp,
-    this.maxTemp,
-    this.locationId,
-    this.created,
-    this.lastUpdated,
-    this.location,
+    required this.weatherCondition,
+    required this.formattedCondition,
+    required this.minTemp,
+    required this.temp,
+    required this.maxTemp,
+    required this.locationId,
+    required this.created,
+    required this.lastUpdated,
+    required this.location,
   });
   @override
   // TODO: implement props
   List<Object> get props => [
-    weatherCondition,
-    formattedCondition,
-    minTemp,
-    temp,
-    maxTemp,
-    locationId,
-    created,
-    lastUpdated,
-    location,
-  ];
+        weatherCondition,
+        formattedCondition,
+        minTemp,
+        temp,
+        maxTemp,
+        locationId,
+        created,
+        lastUpdated,
+        location,
+      ];
   //convert from JSON to Weather object
 /*
 consolidated_weather": [
@@ -72,16 +74,18 @@ consolidated_weather": [
   factory Weather.fromJson(dynamic jsonObject) {
     final consolidatedWeather = jsonObject['consolidated_weather'][0];
     return Weather(
-      weatherCondition: _mapStringToWeatherCondition(consolidatedWeather['weather_state_abbr']) ?? '',
-      formattedCondition: consolidatedWeather['weather_state_name'] ?? '',
-      minTemp: consolidatedWeather['min_temp'] as double,
-      temp: consolidatedWeather['the_temp'] as double,
-      maxTemp: consolidatedWeather['max_temp'] as double,
-      locationId: jsonObject['woeid'] as int, //Where On Earth Identifier = woeid
-      created: consolidatedWeather['created'],
-      lastUpdated: DateTime.now(),
-      location: jsonObject['title']
-    );
+        weatherCondition: _mapStringToWeatherCondition(
+                consolidatedWeather['weather_state_abbr']) ??
+            '',
+        formattedCondition: consolidatedWeather['weather_state_name'] ?? '',
+        minTemp: consolidatedWeather['min_temp'] as double,
+        temp: consolidatedWeather['the_temp'] as double,
+        maxTemp: consolidatedWeather['max_temp'] as double,
+        locationId:
+            jsonObject['woeid'] as int, //Where On Earth Identifier = woeid
+        created: consolidatedWeather['created'],
+        lastUpdated: DateTime.now(),
+        location: jsonObject['title']);
   }
   static WeatherCondition _mapStringToWeatherCondition(String inputString) {
     Map<String, WeatherCondition> map = {

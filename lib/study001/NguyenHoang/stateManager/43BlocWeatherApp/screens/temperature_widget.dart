@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_icons/weather_icons.dart';
-import 'package:weatherapp/blocs/settings_bloc.dart';
-import 'package:weatherapp/blocs/theme_bloc.dart';
+import '../blocs/settings_bloc.dart';
+import '../blocs/theme_bloc.dart';
 import 'package:weatherapp/models/weather.dart';
 import 'package:weatherapp/states/settings_state.dart';
 import 'package:weatherapp/states/theme_state.dart';
