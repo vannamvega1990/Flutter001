@@ -45,15 +45,15 @@ class MyHomePageState extends State<MyHomePage> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.contacts),
-            title: Text("Contacts"),
+            label: "Contacts",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.mail),
-            title: Text("Emails"),
+            label: "Emails",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            title: Text("Profile"),
+            label: "Profile",
           )
         ],
         onTap: (int index) {

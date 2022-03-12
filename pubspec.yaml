@@ -29,6 +29,7 @@ dependencies:
   lottie: ^1.2.2
   font_awesome_flutter: ^9.2.0
   persistent_bottom_nav_bar: ^4.0.2
+  webview_flutter: ^3.0.1       #  webview not ios
 
   # transparent_image: "^0.1.0"
   # cached_network_image: "^0.4.1"

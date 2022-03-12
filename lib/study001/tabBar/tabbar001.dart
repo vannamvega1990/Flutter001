@@ -25,7 +25,7 @@ class profilePageState extends State<profilePage> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          // <--- hinh dang appBar
+          // <--- hinh dang appBar, shape
           title: Text(
             'My Profile',
           ),

@@ -13,13 +13,14 @@ import 'DetailTaskScreen.dart';
 class TaskScreen extends StatefulWidget {
   final int todoId;
   //constructor
-  TaskScreen({this.todoId}):super();
+  TaskScreen({this.todoId}) : super();
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
     return _TaskScreenState();
   }
 }
+
 class _TaskScreenState extends State<TaskScreen> {
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class _TaskScreenState extends State<TaskScreen> {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.add),
-            onPressed: (){
+            onPressed: () {
               //Press this button to navigate to detail Task
             },
           )
@@ -38,7 +39,7 @@ class _TaskScreenState extends State<TaskScreen> {
       ),
       body: FutureBuilder(
           future: fetchTasks(http.Client(), widget.todoId),
-          builder: (context, snapshot){
+          builder: (context, snapshot) {
             if (snapshot.hasError) print(snapshot.error);
             return snapshot.hasData
                 ? TaskList(tasks: snapshot.data)
@@ -47,6 +48,7 @@ class _TaskScreenState extends State<TaskScreen> {
     );
   }
 }
+
 class TaskList extends StatelessWidget {
   final List<Task> tasks;
   TaskList({Key key, this.tasks}) : super(key: key);
@@ -54,29 +56,35 @@ class TaskList extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return ListView.builder(
-        itemBuilder: (context, index) {
-          return GestureDetector(
-            child: Container(
-              padding: EdgeInsets.all(10.0),
-              color: index % 2 == 0 ? Colors.deepOrangeAccent : Colors.amber,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment:CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(this.tasks[index].name, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0)),
-                  new Text('Finished: ${tasks[index].finished==true?"Yes":"No"}', style: TextStyle(fontSize: 16.0))
-                ],
-              ),
+      itemBuilder: (context, index) {
+        return GestureDetector(
+          //        <----- detect gesture
+          child: Container(
+            padding: EdgeInsets.all(10.0),
+            color: index % 2 == 0 ? Colors.deepOrangeAccent : Colors.amber,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(this.tasks[index].name,
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0)),
+                new Text(
+                    'Finished: ${tasks[index].finished == true ? "Yes" : "No"}',
+                    style: TextStyle(fontSize: 16.0))
+              ],
             ),
-            onTap: () {
-              int selectedId = tasks[index].id;
-              Navigator.push(
+          ),
+          onTap: () {
+            int selectedId = tasks[index].id;
+            Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => new DetailTaskScreen(id: selectedId))
-              );
-            } ,
-          );
-        },
+                MaterialPageRoute(
+                    builder: (context) =>
+                        new DetailTaskScreen(id: selectedId)));
+          },
+        );
+      },
       itemCount: this.tasks.length,
     );
   }
