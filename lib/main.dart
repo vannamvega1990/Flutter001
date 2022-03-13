@@ -24,7 +24,9 @@ import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:weather_repository/weather_repository.dart';
 
-import 'study001/video/videoPlayer001.dart';
+import 'study001/firebase/database/database002.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'dart:async';
 
 // void main() async {
 //   FlutterServicesBinding.ensureInitialized();
@@ -40,9 +42,16 @@ import 'study001/video/videoPlayer001.dart';
 //   );
 // }
 
-// void main() =>runApp(Manhinh1());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
+  runApp(
+    const MyApp(),
+  );
+}
 // void main() =>runApp(Vidu002());
 // void main() => runApp(Test003());
 // void main() => runApp(MyAnimationApp());
 
-void main() => runApp(MyApp());
+// void main() => runApp(MyApp());

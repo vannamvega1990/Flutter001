@@ -39,6 +39,14 @@ dependencies:
 # image picker.
   image_picker: ^0.8.4+11
 
+# google login.
+  google_sign_in: ^5.2.4
+
+
+# firebase.
+  firebase_database: ^9.0.8
+  firebase_core: ^1.13.1
+
   cupertino_icons: ^1.0.2
   
   flutter_svg: ^1.0.3
