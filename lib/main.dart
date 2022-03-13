@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:camera/camera.dart';
 // import 'study001/vidu001/mh1.dart';
 // import 'study001/manyScreen/controler.dart';
 // import 'study001/test001/test001.dart';
@@ -23,7 +24,7 @@ import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:weather_repository/weather_repository.dart';
 
-import 'study001/loadingIndicator/indicator001.dart';
+import 'study001/video/videoPlayer001.dart';
 
 // void main() async {
 //   FlutterServicesBinding.ensureInitialized();

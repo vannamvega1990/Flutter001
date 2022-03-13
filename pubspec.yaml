@@ -23,8 +23,24 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+# goi sang app khac: sms, call, email.
+  url_launcher: ^6.0.20 
+
+# request api.
+  http: ^0.13.4
+
+# show camera.
+  camera: ^0.9.4+16
+
+# play video.
+  video_player: ^2.2.6
+
+# image picker.
+  image_picker: ^0.8.4+11
+
   cupertino_icons: ^1.0.2
-  url_launcher: ^6.0.20 # goi sang app khac: sms, call, email.
+  
   flutter_svg: ^1.0.3
   lottie: ^1.2.2
   font_awesome_flutter: ^9.2.0
@@ -38,7 +54,7 @@ dependencies:
   # sqflite: ^1.1.6+1
 
   # flutter_bloc: ^8.0.1
-  http: ^0.13.4
+  
   equatable: ^2.0.0
   # flutter_bloc: ^4.0.0
   # scoped_model: ^1.0.1
