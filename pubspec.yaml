@@ -46,6 +46,15 @@ dependencies:
 # firebase.
   firebase_database: ^9.0.8
   firebase_core: ^1.13.1
+  firebase_storage: ^10.2.9
+
+# edit Media
+# add text, image to image
+  image_watermark: ^0.0.3
+
+
+
+  
 
   cupertino_icons: ^1.0.2
   
