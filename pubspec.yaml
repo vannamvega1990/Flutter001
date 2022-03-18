@@ -51,6 +51,7 @@ dependencies:
 # edit Media
 # add text, image to image
   image_watermark: ^0.0.3
+  # image_editor_pro: ^1.1.8
 
 
 
