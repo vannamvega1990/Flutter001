@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:henho001/views/tabMesager/onlineMessagerView.dart';
 
 class mesagerView extends StatelessWidget {
   const mesagerView({Key? key}) : super(key: key);
@@ -144,7 +145,8 @@ class _mesagerViewSate extends State<mesagerViewPage>
           Expanded(
             child: TabBarView(
               children: [
-                Text('people'),
+                // Text('people'),
+                onlineMessagerView(),
                 Text('Person'),
                 Text('Person'),
                 Text('people'),
