@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'firstScreen.dart';
 import 'secondScreen.dart';
 
-class ManyScreen extends StatelessWidget {
-  const ManyScreen({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class ManyScreen extends StatelessWidget {
       ),
       home: FirstScreen(),
       routes: {
-        FirstScreen.routeName: (ctx) =>FirstScreen(),
+        FirstScreen.routeName: (ctx) => FirstScreen(),
         SecondScreen.routeName: (ctx) => SecondScreen(),
       },
     );

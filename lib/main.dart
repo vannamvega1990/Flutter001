@@ -24,7 +24,7 @@ import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:weather_repository/weather_repository.dart';
 
-import 'study001/editMedia/addTextImageToImage.dart';
+import 'study001/manyScreen/controler.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'dart:async';
 

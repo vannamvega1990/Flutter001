@@ -1,9 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-
-class Vidu002 extends StatelessWidget {
+class MyApp extends StatelessWidget {
   _launchNativeApps(String url) async {
     if (await canLaunch(url)) {
       await launch(url);
@@ -32,7 +30,7 @@ class Vidu002 extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            children:[
+            children: [
               SizedBox(height: 30),
               CircleAvatar(
                 radius: 100,
@@ -75,8 +73,7 @@ class Vidu002 extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: RaisedButton(
                   onPressed: () {
-                    _launchNativeApps(
-                        'https://shashankbiplav.com');
+                    _launchNativeApps('https://shashankbiplav.com');
                   },
                   child: Container(
                     height: 40,
